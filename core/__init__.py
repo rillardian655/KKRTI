@@ -23,6 +23,11 @@ from core.airspeed import differential_pressure_to_airspeed
 from core.path_following import compute_course_correction
 from core.servo_limiter import ServoLimiter
 from core.thermal_model import BatteryThermalModel
+from core.kalman_filter import KalmanFilter1D
+from core.declination import magnetic_to_true_heading
+from core.energy_metrics import calculate_flight_energy
+from core.geometry import point_to_line_distance
+from core.stall_detector import StallDetector
 
 __all__ = [
     "Position", "Attitude", "Velocity", "BatteryState", "DroneState", "DroneTelemetry",
@@ -32,5 +37,6 @@ __all__ = [
     "SpeedGovernor", "trigger_emergency_kill", "PIDController", "LowPassFilter",
     "pressure_to_altitude", "GPSFilter", "generate_arc", "ComplementaryFilter",
     "TakeoffAbortDetector", "differential_pressure_to_airspeed", "compute_course_correction",
-    "ServoLimiter", "BatteryThermalModel"
+    "ServoLimiter", "BatteryThermalModel", "KalmanFilter1D", "magnetic_to_true_heading",
+    "calculate_flight_energy", "point_to_line_distance", "StallDetector"
 ]
