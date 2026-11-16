@@ -16,6 +16,13 @@ from core.pid_controller import PIDController
 from core.filters import LowPassFilter
 from core.barometer import pressure_to_altitude
 from core.gps_filter import GPSFilter
+from core.dubins import generate_arc
+from core.complementary_filter import ComplementaryFilter
+from core.takeoff_abort import TakeoffAbortDetector
+from core.airspeed import differential_pressure_to_airspeed
+from core.path_following import compute_course_correction
+from core.servo_limiter import ServoLimiter
+from core.thermal_model import BatteryThermalModel
 
 __all__ = [
     "Position", "Attitude", "Velocity", "BatteryState", "DroneState", "DroneTelemetry",
@@ -23,5 +30,7 @@ __all__ = [
     "MAVLinkBridge", "DroneController", "GeofenceManager", "MissionPlanner",
     "Waypoint", "FailsafeManager", "euler_to_quaternion", "quaternion_to_euler",
     "SpeedGovernor", "trigger_emergency_kill", "PIDController", "LowPassFilter",
-    "pressure_to_altitude", "GPSFilter"
+    "pressure_to_altitude", "GPSFilter", "generate_arc", "ComplementaryFilter",
+    "TakeoffAbortDetector", "differential_pressure_to_airspeed", "compute_course_correction",
+    "ServoLimiter", "BatteryThermalModel"
 ]
