@@ -1,0 +1,10 @@
+{
+  "name": "Lanud Sulaiman, Bandung",
+  "coordinates": {
+    "latitude": -6.980556,
+    "longitude": 107.575000,
+    "elevation_msl": 662.0
+  },
+  "runway_heading_deg": 130.0,
+  "default_max_alt_agl": 60.0
+}
