@@ -1,0 +1,16 @@
+{
+  "quad_mode": {
+    "max_climb_rate": 3.0,
+    "max_descent_rate": 2.0,
+    "max_groundspeed": 10.0
+  },
+  "fixed_wing_mode": {
+    "stall_speed": 11.0,
+    "cruise_speed": 18.0,
+    "max_groundspeed": 28.0
+  },
+  "transition": {
+    "transition_altitude_agl": 25.0,
+    "transition_duration_sec": 4.5
+  }
+}
