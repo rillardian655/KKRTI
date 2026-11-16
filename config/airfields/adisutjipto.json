@@ -1,0 +1,10 @@
+{
+  "name": "Lanud Adisutjipto, Yogyakarta",
+  "coordinates": {
+    "latitude": -7.788056,
+    "longitude": 110.431667,
+    "elevation_msl": 107.0
+  },
+  "runway_heading_deg": 90.0,
+  "default_max_alt_agl": 50.0
+}
