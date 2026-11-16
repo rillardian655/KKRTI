@@ -84,3 +84,4 @@ class GeofenceManager:
                 return False, f"Max Radius Breach: {dist:.1f}m > limit {self.max_distance_from_home:.1f}m"
 
         return True, "Within Safe Perimeter"
+

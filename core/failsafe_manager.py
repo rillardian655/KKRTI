@@ -75,3 +75,4 @@ class FailsafeManager:
     def reset(self):
         self.failsafe_triggered = False
         self.active_reason = None
+

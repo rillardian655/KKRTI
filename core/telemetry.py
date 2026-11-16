@@ -122,3 +122,4 @@ def calculate_bearing(lat1: float, lon1: float, lat2: float, lon2: float) -> flo
     x = math.cos(phi1) * math.sin(phi2) - math.sin(phi1) * math.cos(phi2) * math.cos(delta_lambda)
     initial_bearing = math.degrees(math.atan2(y, x))
     return (initial_bearing + 360.0) % 360.0
+

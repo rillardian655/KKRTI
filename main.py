@@ -53,14 +53,14 @@ def interactive_menu(endpoint: str):
 
     while True:
         console.print(Panel("""[bold]Select an action:[/bold]
- [1] 🛸 Launch Built-in MAVLink SITL Simulator (Background)
- [2] 🛫 Run Mission 01: Basic Takeoff, Hover & Land
- [3] 🗺️  Run Mission 02: Autonomous Waypoint Survey & Camera Trigger
- [4] 🎯 Run Mission 03: Precision Payload Drop (KRTI VTOL/TD)
- [5] 🛡️  Run Mission 04: Geofence Enforcement & Autonomous Failsafe
- [6] 📊 Open Live Terminal HUD (Real-time Telemetry)
- [7] 🌐 Start Web Ground Station Map (http://127.0.0.1:8080)
- [0] ❌ Exit
+ [1] Launch Built-in MAVLink SITL Simulator (Background)
+ [2] Run Mission 01: Basic Takeoff, Hover & Land
+ [3] Run Mission 02: Autonomous Waypoint Survey & Camera Trigger
+ [4] Run Mission 03: Precision Payload Drop (KRTI VTOL/TD)
+ [5] Run Mission 04: Geofence Enforcement & Autonomous Failsafe
+ [6] Open Live Terminal HUD (Real-time Telemetry)
+ [7] Start Web Ground Station Map (http://127.0.0.1:8080)
+ [0] Exit
 """, title="[bold cyan]KKRTI Mission Control Menu[/bold cyan]"))
 
         choice = Prompt.ask("Enter option", default="1")
@@ -69,7 +69,7 @@ def interactive_menu(endpoint: str):
             if sim_runner is None:
                 sim_runner = SITLRunner(mode="mock", port=14550)
                 sim_runner.start()
-                console.print("[bold green]✔ SITL Simulator is running on udp:127.0.0.1:14550[/bold green]")
+                console.print("[bold green][OK] SITL Simulator is running on udp:127.0.0.1:14550[/bold green]")
             else:
                 console.print("[yellow]SITL Simulator is already running![/yellow]")
 
@@ -131,3 +131,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

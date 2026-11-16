@@ -48,7 +48,7 @@ def run_hud(endpoint: str = "udp:127.0.0.1:14550"):
                 link_str = "[bold green]ONLINE[/bold green]" if snap.is_link_alive() else "[bold red]LOST[/bold red]"
                 layout["header"].update(
                     Panel(
-                        f"[bold yellow]✈ KKRTI AUTONOMOUS UAV TELEMETRY HUD[/bold yellow] | "
+                        f"[bold yellow]KKRTI AUTONOMOUS UAV TELEMETRY HUD[/bold yellow] | "
                         f"MAVLink: {link_str} | Status: {armed_str} | Mode: [bold cyan]{snap.state.mode}[/bold cyan]",
                         style="blue"
                     )
@@ -110,3 +110,4 @@ def run_hud(endpoint: str = "udp:127.0.0.1:14550"):
 if __name__ == "__main__":
     endpoint = sys.argv[1] if len(sys.argv) > 1 else "udp:127.0.0.1:14550"
     run_hud(endpoint)
+

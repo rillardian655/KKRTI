@@ -132,3 +132,4 @@ class MissionPlanner:
 
     def is_finished(self) -> bool:
         return self.current_index >= len(self.waypoints)
+

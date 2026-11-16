@@ -36,7 +36,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <body>
   <div id="container">
     <div id="navbar">
-      <div id="nav-title">✈ KKRTI UAV Ground Visualizer <span id="link-badge" class="badge badge-offline">CONNECTING</span> <span id="mode-badge" class="badge badge-mode">--</span></div>
+      <div id="nav-title">KKRTI UAV Ground Visualizer <span id="link-badge" class="badge badge-offline">CONNECTING</span> <span id="mode-badge" class="badge badge-mode">--</span></div>
       <div id="metrics">
         <div class="metric-item"><span class="metric-label">Alt (AGL)</span><span class="metric-val" id="val-alt">0.0 m</span></div>
         <div class="metric-item"><span class="metric-label">Speed</span><span class="metric-val" id="val-speed">0.0 m/s</span></div>
@@ -62,17 +62,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
     // Drone Icon
     const droneIcon = L.divIcon({
-      html: '<div style="font-size:24px; text-shadow: 0 0 4px #000;">🛸</div>',
+      html: '<div style="width:14px;height:14px;border-radius:50%;background:#38bdf8;border:2px solid #ffffff;box-shadow:0 0 8px #38bdf8;"></div>',
       className: 'drone-div-icon',
-      iconSize: [24, 24],
-      iconAnchor: [12, 12]
+      iconSize: [14, 14],
+      iconAnchor: [7, 7]
     });
 
     const homeIcon = L.divIcon({
-      html: '<div style="font-size:22px;">🏠</div>',
+      html: '<div style="width:12px;height:12px;background:#e11d48;border:2px solid #ffffff;transform:rotate(45deg);"></div>',
       className: 'home-div-icon',
-      iconSize: [22, 22],
-      iconAnchor: [11, 11]
+      iconSize: [12, 12],
+      iconAnchor: [6, 6]
     });
 
     async function updateTelemetry() {
@@ -175,7 +175,7 @@ def start_web_viewer(endpoint: str = "udp:127.0.0.1:14550", http_port: int = 808
     server = socketserver.TCPServer(("127.0.0.1", http_port), WebGCSHandler)
     server.allow_reuse_address = True
     print(f"\n=======================================================")
-    print(f"🚀 KKRTI Web Ground Station Live on http://127.0.0.1:{http_port}")
+    print(f"[OK] KKRTI Web Ground Station Live on http://127.0.0.1:{http_port}")
     print(f"=======================================================\n")
     try:
         server.serve_forever()
@@ -188,3 +188,4 @@ def start_web_viewer(endpoint: str = "udp:127.0.0.1:14550", http_port: int = 808
 
 if __name__ == "__main__":
     start_web_viewer()
+
