@@ -1,0 +1,28 @@
+{
+  "connection": {
+    "default_endpoint": "udp:127.0.0.1:14550",
+    "baudrate": 57600,
+    "source_system": 255,
+    "source_component": 0,
+    "timeout": 10
+  },
+  "flight_params": {
+    "default_takeoff_alt": 15.0,
+    "default_cruise_speed": 8.0,
+    "max_altitude": 50.0,
+    "min_altitude": 2.0,
+    "waypoint_acceptance_radius": 2.5
+  },
+  "home_location": {
+    "latitude": -7.925500,
+    "longitude": 110.548500,
+    "altitude": 190.0,
+    "description": "Lanud Gading, Playen, Gunungkidul (Typical KRTI Arena)"
+  },
+  "failsafe": {
+    "battery_low_percentage": 20.0,
+    "battery_critical_percentage": 10.0,
+    "telemetry_timeout_seconds": 4.0,
+    "auto_rtl_on_breach": true
+  }
+}
